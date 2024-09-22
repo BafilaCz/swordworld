@@ -1,0 +1,11 @@
+<script type="text/javascript">
+    // Single Page App redirect script for GitHub Pages
+    (function() {
+      var redirectTo = window.location.pathname;
+      var origin = window.location.origin;
+      if (redirectTo !== '/') {
+        window.location.href = origin + '/#' + redirectTo;
+      }
+    })();
+  </script>
+  
