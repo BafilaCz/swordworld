@@ -1,11 +1,24 @@
-<script type="text/javascript">
-    // Single Page App redirect script for GitHub Pages
-    (function() {
-      var redirectTo = window.location.pathname;
-      var origin = window.location.origin;
-      if (redirectTo !== '/') {
-        window.location.href = origin + '/#' + redirectTo;
-      }
-    })();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Not Found</title>
+</head>
+<body>
+  <h1>404 - Page Not Found</h1>
+  <p>Redirecting to home...</p>
+
+  <script type="text/javascript">
+    // Check if the user is on the GitHub Pages environment
+    var origin = window.location.origin;
+    
+    // Redirect any unknown routes to the root and maintain the client-side routing path
+    if (window.location.pathname !== '/') {
+      window.location.href = origin + '/#' + window.location.pathname;
+    } else {
+      window.location.href = origin + '/';
+    }
   </script>
-  
+</body>
+</html>
